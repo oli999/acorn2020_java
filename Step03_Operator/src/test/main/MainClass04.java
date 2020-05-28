@@ -1,42 +1,31 @@
 package test.main;
 /*
- *  [ ¿¬»êÀÚ ]
- *  
- *  4. ³í¸® ¿¬»êÀÚ
- *  
- *  - boolean type µ¥ÀÌÅÍ¸¦ ¿¬»ê ÇØ ÁÖ´Â ¿¬»êÀÚ ÀÌ´Ù.
- *  
- * || : or ¿¬»ê, ÇÕÁıÇÕÀÇ °³³ä, ¾î´À ÇÏ³ª¶óµµ true ÀÌ¸é 
- *      °á°ú´Â true
- * && : and ¿¬»ê, ±³ÁıÇÕÀÇ °³³ä, ¸ğµÎ true ÀÏ¶§ °á°ú´Â true
- * !  : not ¿¬»ê, boolean °ªÀ» ¹İÀü½ÃÅ²´Ù. 
- *      true => false, false => true 
+ *  4. ë…¼ë¦¬ì—°ì‚°ì í…ŒìŠ¤íŠ¸
  */
 public class MainClass04 {
 	public static void main(String[] args) {
-		//or ¿¬»ê
+		
 		boolean result1 = false || false; //false
 		boolean result2 = false || true; //true
 		boolean result3 = true || false; //true
 		boolean result4 = true || true; //true
 		
-		//and ¿¬»ê
 		boolean result5 = false && false; //false
 		boolean result6 = false && true; //false
 		boolean result7 = true && false; //false
 		boolean result8 = true && true; //true
 		
-		//not ¿¬»ê
+		
 		boolean result9 = !true; //false
 		boolean result19 = !false; //true
 		
 		boolean isRun=false;
 		if(isRun != true){
-			System.out.println("´Ş¸®Áö ¾Ê¾Æ¿ä");
+			System.out.println("ë‹¬ë¦¬ì§€ ì•Šì•„ìš”");
 		}
 		
 		if(!isRun){
-			System.out.println("´Ş¸®Áö ¾Ê¾Æ¿ä2");
+			System.out.println("ë‹¬ë¦¬ì§€ ì•Šì•„ìš”2");
 		}
 	}	
 }

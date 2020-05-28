@@ -1,24 +1,18 @@
 package test.main;
 /*
- *  [ ¿¬»êÀÚ ]
- *  
- *  6. 3Ç× ¿¬»êÀÚ
- *  
- *  - Çü½Ä 
- *  
- *  boolean type ? °ª1 : °ª2
+ *  6. 3í•­ ì—°ì‚°ì í…ŒìŠ¤íŠ¸
  */
 public class MainClass06 {
 	public static void main(String[] args) {
 		boolean isWait=false;
-		String result = isWait ? "±â´Ù·Á" : "±â´Ù¸®Áö¸¶";
+		String result = isWait ? "ê¸°ë‹¤ë ¤ìš”" : "ê¸°ë‹¤ë¦¬ì§€ ì•Šì•„ìš”";
 		System.out.println(result);
 		
 		String result2=null;
 		if(isWait) {
-			result2="±â´Ù·Á";
+			result2="ê¸°ë‹¤ë ¤ìš”";
 		}else {
-			result2="±â´Ù¸®Áö¸¶";
+			result2="ê¸°ë‹¤ë¦¬ì§€ ì•Šì•„ìš”";
 		}
 		System.out.println(result2);
 	}

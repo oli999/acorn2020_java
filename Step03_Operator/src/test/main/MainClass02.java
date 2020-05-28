@@ -1,32 +1,24 @@
 package test.main;
 /*
- *  [ ¿¬»êÀÚ ]
- *  
- *  2. Áõ°¨ ¿¬»êÀÚ
- *  
- *  Á¾·ù: ++, --
+ *  2. ì¦ê° ì—°ì‚°ì í…ŒìŠ¤íŠ¸
  */
 public class MainClass02 {
 	public static void main(String[] args) {
 		int num=0;
-		num++; //1 ¾¿ Áõ°¡ ½ÃÅ°±â 
+		num++; 
 		num++;
 		num++;
 		
 		int num2=0;
-		num2--; //1 ¾¿ °¨¼Ò ½ÃÅ°±â
+		num2--; 
 		num2--;
 		num2--;	
 		
 		int num3=0;
-		// ++ ¿¬»êÀÚ°¡ º¯¼ö µÚ¿¡ ÀÖÀ¸¸é ¿¬»êÀÇ ¿ì¼±¼øÀ§°¡ 
-		// = º¸´Ù ´Ê´Ù
-		int result1 = num3++; // result1 Àº 0
+		int result1 = num3++; 
 		
 		int num4=0;
-		// -- ¿¬»êÀÚ°¡ º¯¼ö ¾Õ¿¡ ÀÖÀ¸¸é ¿¬»êÀÇ ¿ì¼± ¼øÀ§°¡ 
-		// = º¸´Ù ºü¸£´Ù 
-		int result2 = ++num4; // result2 ´Â 1
+		int result2 = ++num4;
 	}
 }
 

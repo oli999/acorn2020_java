@@ -1,26 +1,15 @@
 package test.main;
 /*
- *   [ ¿¬»êÀÚ ]
- *   
- *   3. ºñ±³ ¿¬»êÀÚ
- *   
- *   Á¾·ù : ==, !=, >, >=, <, <=
- *   
- *   - ºñ±³ ¿¬»êÀÇ °á°ú´Â boolean type À¸·Î ³ªÅ¸³­´Ù. 
+ *  3. ë¹„êµì—°ì‚°ì í…ŒìŠ¤íŠ¸
  */
 public class MainClass03 {
 	public static void main(String[] args) {
-		//¾çÂÊ¿¡ ÀÖ´Â °ªÀÌ °°ÀºÁö ºñ±³
+		
 		boolean result1 = 10 == 10; //true
-		//¾çÂÊ¿¡ ÀÖ´Â °ªÀÌ ´Ù¸¥Áö ºñ±³
 		boolean result2 = 10 != 10; //false
-		//¿ŞÂÊ¿¡ ÀÖ´Â °ªÀÌ Å«Áö ºñ±³
 		boolean result3 = 10 > 100; //false;
-		//¿ŞÂÊ¿¡ ÀÖ´Â °ªÀÌ Å©°Å³ª °°ÀºÁö ºñ±³
 		boolean result4 = 10 >= 10; //true
-		//¿ŞÂÊ¿¡ ÀÖ´Â °ªÀÌ ÀÛÀºÁö ºñ±³
 		boolean result5 = 10 < 100; //true
-		//¿ŞÂÊ¿¡ ÀÖ´Â °ªÀÌ ÀÛ°Å³ª °°ÀºÁö ºñ±³
 		boolean result6 = 10 <= 10; //true	
 		
 		String name=null;

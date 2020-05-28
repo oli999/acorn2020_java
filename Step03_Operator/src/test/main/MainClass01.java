@@ -1,34 +1,22 @@
 package test.main;
 /*
- *  [ ¿¬»êÀÚ ]
- *  
- *  1. »ê¼ú ¿¬»êÀÚ
- *  
- *  - Á¾·ù : +, -, *, /, %
+ *  1. ì‚°ìˆ ì—°ì‚°ì í…ŒìŠ¤íŠ¸
  */
 public class MainClass01 {
 	public static void main(String[] args) {
 		int num1=5;
 		int num2=2;
 		
-		// + ¿¬»êÀÚ¸¦ ÀÌ¿ëÇØ¼­ µÎ¼öÀÇ ÇÕ ±¸ÇÏ±â
 		int sum = 10 + 1;
 		int sum2 = num1 + num2;
 		int sum3 = 10 + num2;
 		
-		// Á¤¼ö / Á¤¼ö => Á¤¼öÀÌ¹Ç·Î °á°úÀûÀ¸·Î 
-		// 5¸¦ 3À¸·Î ³ª´« ¸òÀ» ¾ò¾î³½´Ù.
 		int result1 = 5 / 3;
-		// Á¤¼ö / Á¤¼ö => Á¤¼öÀÌ¹Ç·Î °á°úÀûÀ¸·Î 
-		// 5¸¦ 2À¸·Î ³ª´« ¸òÀ» ¾ò¾î³½´Ù.
 		int result2 = num1 / num2;	
-		
-		//Á¤È®ÇÑ ½Ç¼ö°ªÀ» ¾ò¾î³»°í ½ÍÀ¸¸é ¿¬»ê¿¡ Âü¿©ÇÏ´Â 
-		//data °¡ ÇÏ³ª¶óµµ double type ÀÌ¸é µÈ´Ù. 
+	
 		double result3 = 5 / 3.0;
 		double result4 = num1 / (double)num2;
 		
-		//num1 À» num2 ·Î ³ª´« ³ª¸ÓÁö°ª ¾ò¾î³»±â
 		int result5 = num1 % num2;
 	}
 }
