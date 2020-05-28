@@ -2,6 +2,10 @@ package test.main;
 /*
  *  1. 산술연산자 테스트
  */
+
+ 
+
+
 public class MainClass01 {
 	public static void main(String[] args) {
 		int num1=5;
@@ -18,6 +22,14 @@ public class MainClass01 {
 		double result4 = num1 / (double)num2;
 		
 		int result5 = num1 % num2;
+	}
+	public static void getHo()
+	{
+		
+	}
+	
+	public static void hello()
+	{
 	}
 }
 
