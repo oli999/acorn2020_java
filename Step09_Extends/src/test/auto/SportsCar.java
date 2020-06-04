@@ -1,6 +1,8 @@
 package test.auto;
 
-public class SportsCar extends Car{
+// class 예약어 앞에 final 예약어를 붙이면 더 이상 상속이 안된다.
+// 마지막 클래스 즉 종단 클래스가 된다. 
+public final class SportsCar extends Car{
 	//생성자
 	public SportsCar(Engine engine) {
 		super(engine);
