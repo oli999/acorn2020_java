@@ -1,5 +1,6 @@
 package test.main;
 
+
 import tesc.mypac.Box;
 import tesc.mypac.Car;
 import tesc.mypac.Member;
@@ -30,3 +31,4 @@ public class MainClass06 {
 		 
 	}
 }
+

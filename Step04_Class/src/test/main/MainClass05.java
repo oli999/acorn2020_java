@@ -1,4 +1,5 @@
 package test.main;
+
 import tesc.mypac.Rect;
 
 public class MainClass05 {

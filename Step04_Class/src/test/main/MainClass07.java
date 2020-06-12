@@ -1,5 +1,6 @@
 package test.main;
 
+
 import tesc.mypac.Marine;
 
 public class MainClass07 {
@@ -33,3 +34,4 @@ public class MainClass07 {
 		
 	}
 }
+

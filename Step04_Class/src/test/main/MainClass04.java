@@ -1,5 +1,6 @@
 package test.main;
 
+
 import tesc.mypac.Member;
 
 public class MainClass04 {
@@ -27,3 +28,4 @@ public static String changeString(String param) {
 	return    param += " world";
 }
 }
+
