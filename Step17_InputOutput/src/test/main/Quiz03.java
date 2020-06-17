@@ -4,7 +4,12 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -12,6 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
@@ -81,12 +87,70 @@ public class Quiz03 extends JFrame implements ActionListener{
 		// 눌러진 아이템의 액션 command 를 읽어온다.
 		String command=e.getActionCommand();
 		if(command.equals("new")) { // 아이템 New 를 눌렀을때
+			area.setText("");//문자열 삭제
 			area.setVisible(true); //JTextArea 를 보이게 하고 
 			area.grabFocus(); //포커스를 준다. 
 		}else if(command.equals("open")) {// 아이템 Open 을 눌렀을때
-			
+			area.setText("");
+			openContent();
 		}else if(command.equals("save")) {// 아이템 Save 를 눌렀을때 
-			
+			saveContent();
+		}
+	}
+	//파일에 있는 문자열을 읽어와서 출력하는 작업을 하는 메소드
+	public void openContent() {
+		JFileChooser fc=new JFileChooser("c:/acorn2020/myFolder");
+		//파일을 open 하는 다이얼로그 띄우기 
+		int result=fc.showOpenDialog(this);	
+		if(result == JFileChooser.APPROVE_OPTION) {
+			// open 할 예정인 파일 객체의 참조값 얻어오기 
+			File file=fc.getSelectedFile();
+			try {
+				FileReader fr=new FileReader(file);
+				BufferedReader br=new BufferedReader(fr);
+				while(true) {//반복문 돌면서
+					//문자열을 줄단위로 한줄씩 읽어낸다.
+					String line=br.readLine();
+					if(line == null) { // 더이상 읽을 문자열이 없다면 
+						break; //반복문 탈출 
+					}
+					//JTextArea 에 문자열을 개행기호와 함께 append (누적 출력) 하기
+					area.append(line);
+					area.append("\r\n");
+				}
+				//JTextArea 가 화면에 보이도록 
+				area.setVisible(true);
+				br.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	//파일에 저장하는 작업을 하는 메소드
+	public void saveContent() {
+		//JTextArea 에 입력한 문자열을 읽어온다.
+		String content=area.getText();
+		JFileChooser fc=new JFileChooser("c:/acorn2020/myFolder");
+		int result=fc.showSaveDialog(this);	
+		if(result == JFileChooser.APPROVE_OPTION) {
+			//새로 만들 예정인 File 객체 의 참조값 얻어오기 
+			File file =fc.getSelectedFile();
+			try {
+				//파일에 문자열을 출력할수 있는 객체 생성
+				FileWriter fw=new FileWriter(file);
+				fw.write(content);
+				fw.flush();
+				fw.close();
+				JOptionPane.showMessageDialog
+					(this, file.getName()+"  파일을 저장했습니다.");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }
