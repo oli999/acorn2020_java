@@ -17,6 +17,7 @@ public class ServerMain {
 	static List<ServerThread> threadList=new ArrayList<>();
 	
 	public static void main(String[] args) {
+		
 		//필요한 객체를 저장할 지역변수 미리 만들기 
 		ServerSocket serverSocket=null;
 		try {
@@ -105,6 +106,9 @@ public class ServerMain {
 			}catch(Exception e) {
 				e.printStackTrace();
 			}finally {
+				//접속이 끈겨서 종료 되는 스레드는 List에서 제거한다.
+				threadList.remove(this);
+				
 				try {
 					if(socket!=null)socket.close();
 				}catch(Exception e) {}
