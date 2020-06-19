@@ -110,8 +110,12 @@ public class ServerMain {
 			}finally {
 				//접속이 끈겨서 종료 되는 스레드는 List에서 제거한다.
 				threadList.remove(this);
-				
+				// this 가 퇴장 한다고 메세지를 보낸다.
 				try {
+					JSONObject jsonObj=new JSONObject();
+					jsonObj.put("type", "out");
+					jsonObj.put("name", this.chatName);
+					sendMessage(jsonObj.toString());
 					if(socket!=null)socket.close();
 				}catch(Exception e) {}
 			}

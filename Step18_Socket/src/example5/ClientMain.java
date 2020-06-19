@@ -22,6 +22,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 /*
  * 	 JSON
@@ -194,23 +195,8 @@ public class ClientMain extends JFrame
 				while(true) {
 					//서버로부터 문자열이 전송되는지 대기한다. 
 					String msg=br.readLine();
-					JSONObject jsonObj=new JSONObject(msg);
-					String type=jsonObj.getString("type");
-					if(type.equals("enter")) {//입장 메세지라면
-						//누가 입장했는지 읽어낸다. 
-						String name=jsonObj.getString("name");
-						area.append("["+name+"] 님이 입장했습니다.");
-						area.append("\r\n");
-					}else if(type.equals("msg")) {//대화 메세지라면
-						//누가 
-						String name=jsonObj.getString("name");
-						//어떤 내용을
-						String content=jsonObj.getString("content");
-						//출력하기
-						area.append(name+" : "+content);
-						area.append("\r\n");
-					}
-					
+					//메소드를 호출하면서 문자열 전달
+					updateTextArea(msg);
 					//최근 추가된 글 내용이 보일수 있도록
 					int docLength=area.getDocument().getLength();
 					area.setCaretPosition(docLength);
@@ -221,8 +207,40 @@ public class ClientMain extends JFrame
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
+		}//run()
+		
+		//JTextArea 에 문자열을 출력하는 메소드 
+		public void updateTextArea(String msg) {
+			try {
+				JSONObject jsonObj=new JSONObject(msg);
+				String type=jsonObj.getString("type");
+				if(type.equals("enter")) {//입장 메세지라면
+					//누가 입장했는지 읽어낸다. 
+					String name=jsonObj.getString("name");
+					area.append("["+name+"] 님이 입장했습니다.");
+					area.append("\r\n");
+				}else if(type.equals("msg")) {//대화 메세지라면
+					//누가 
+					String name=jsonObj.getString("name");
+					//어떤 내용을
+					String content=jsonObj.getString("content");
+					//출력하기
+					area.append(name+" : "+content);
+					area.append("\r\n");
+				}else if(type.equals("out")) {
+					//누가
+					String name=jsonObj.getString("name");
+					//출력하기
+					area.append("[[ "+name+" ]] 님이 퇴장했습니다.");
+					area.append("\r\n");
+				}
+			}catch(JSONException je) {
+				je.printStackTrace();
+			}
 		}
-	}
+		
+	}// class ClientThread
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		//눌러진 키의 코드값
