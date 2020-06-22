@@ -51,9 +51,23 @@ public class MainClass07 {
 			e.printStackTrace();
 		}finally {
 			try {
+				//객체를 사용했던 순서 역순으로 닫아준다.
+				if(rs!=null)rs.close();
 				if(pstmt!=null)pstmt.close();
 				if(conn!=null)conn.close();
 			}catch(Exception e) {}
+		}
+		
+		//아래의 static 메소드 호출하기
+		printMember(list);
+		
+	}// main()
+	
+	//회원목록을 콘솔창에 출력해주는 메소드 
+	public static void printMember(List<MemberDto> list) {
+		for(MemberDto tmp:list) {
+			System.out.println(tmp.getNum()+" | "+
+					tmp.getName()+" | "+tmp.getAddr());
 		}
 	}
 }
