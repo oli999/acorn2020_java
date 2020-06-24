@@ -87,7 +87,7 @@ public class MemoDao {
 			//DBConnect 객체를 이용해서 Connection 객체의 참조값을 얻어온다.
 			conn=new DBConnect().getConn();
 			//실행할 sql 문
-			String sql="SELECT num,content,regdate"
+			String sql="SELECT num,content,TO_CHAR(regdate,'YYYY\"년\"MM\"월\"DD\"일\" AM HH:MI') AS regdate"
 					+ " FROM memo"
 					+ " ORDER BY num ASC";
 			pstmt=conn.prepareStatement(sql);
