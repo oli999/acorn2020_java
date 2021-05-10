@@ -32,6 +32,7 @@ public class MainClass07 {
 				System.out.println("지상 공격을 해요!");
 			}
 		});
+		
 	}
 	
 	public static void useWeapon(Weapon w) {

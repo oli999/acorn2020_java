@@ -3,6 +3,7 @@ package test.auto;
 public class Car {
 	//필드
 	public Engine engine;
+	
 	//Engine 객체를 인자로 전달 받는 생성자
 	public Car(Engine engine) {
 		//필드에 저장하기

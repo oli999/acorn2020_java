@@ -9,7 +9,7 @@ public class MainClass01 {
 		Remocon r1=new MyRemocon();
 		//원래 class type 
 		MyRemocon r2=new MyRemocon();
-		
+	
 		useRemocon(r1);
 		useRemocon(r2);
 	}

@@ -24,3 +24,10 @@ public class MainClass01 {
 		w1.attack();
 	}
 }
+
+
+
+
+
+
+

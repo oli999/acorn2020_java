@@ -1,5 +1,6 @@
 package test.main;
 
+import test.mypac.Bike;
 import test.mypac.Rect;
 
 public class MainClass05 {
@@ -11,6 +12,7 @@ public class MainClass05 {
 		rects[0]=new Rect(10, 20);
 		rects[1]=new Rect(10, 30);
 		rects[2]=new Rect(10, 40);
+		
 		//3. 반복문 for 문을 이용해서 각각 4각형의 면적을 콘솔창에 출력해 보세요.
 		for(int i=0; i<rects.length; i++) {
 			//배열의 i번째 방에 있는 Rect 객체의 참조값을 불러온다.

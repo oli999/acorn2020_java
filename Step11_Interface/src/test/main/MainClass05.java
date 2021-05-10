@@ -13,6 +13,7 @@ public class MainClass05 {
 		String result1=j1.join("김", "구라");
 		
 		Joinner j2=(first, second)->{ 
+			
 			return first+second; 
 		};
 		String result2=j2.join("해", "골");

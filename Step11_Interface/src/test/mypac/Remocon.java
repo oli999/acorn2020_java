@@ -15,7 +15,7 @@ public interface Remocon {
 	public static final String COMPANY="LG";
 	//메소드 (abstract 예약어 생략 가능)
 	public abstract void up();
-	public abstract void down();
+	public void down();
 }
 
 

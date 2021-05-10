@@ -13,9 +13,15 @@ public class MainClass02 {
 		//p1 에 담긴 참조값을 Phone type 지역변수 p3 에 담기
 		Phone p3=p1;
 		//p1 에 담긴 참조값을 Object type 지역변수 p4 에 담기 
-		Object p4=p1;
+		Object p4=p1;	
 	}
 }
+
+
+
+
+
+
 
 
 
