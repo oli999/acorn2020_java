@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class MainClass15 {
 	public static void main(String[] args) {
-		File memoFile=new File("c:/acorn2020/myFolder/memo.txt");
+		File memoFile=new File("c:/acorn202104/myFolder/memo.txt");
 		//필요한 객체의 참조값을 담을 지역 변수를 미리 만든다.
 		FileReader fr=null;
 		BufferedReader br=null;
@@ -33,10 +33,9 @@ public class MainClass15 {
 		}finally { //예외가 발생하던 안하던 반드시 실행이 보장되는 블럭 
 			//마무리 작업을 한다 (보통 열었던 스트림 객체를 닫는 작업을 한다)
 			try {
-				//null 체크를 한 다음에 메소들 호출해서 마무리 작업을 한다. 
 				if(fr!=null)fr.close();
 				if(br!=null)br.close();
-			}catch(IOException ie) {}
+			} catch (Exception e) {}
 		}
 	}
 }

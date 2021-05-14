@@ -71,9 +71,9 @@ public class MyFrame extends JFrame
 		
 		//기본 모델 객체 ( 목록에 출력할 data 를 가지고 있는 객체 )
 		model=new DefaultListModel<String>();
-		model.addElement("김구라");
-		model.addElement("해골");
-		model.addElement("원숭이");
+		model.addElement("김구라1");
+		model.addElement("해골2");
+		model.addElement("원숭이3");
 		
 		//목록에 모델 연결하기 
 		list.setModel(model);

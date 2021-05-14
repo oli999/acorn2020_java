@@ -13,9 +13,9 @@ public class MainClass16 {
 		
 		try {
 			//파일에서 byte 를 읽어낼 객체 
-			fis=new FileInputStream("c:/acorn2020/myFolder/1.jpg");
+			fis=new FileInputStream("c:/acorn202104/myFolder/1.jpg");
 			//읽어낸 byte 를 출력할 객체 
-			fos=new FileOutputStream("c:/acorn2020/myFolder/copied.jpg");
+			fos=new FileOutputStream("c:/acorn202104/myFolder/copied.jpg");
 			//반복문 돌면서 읽어내기
 			while(true) {
 				//1 byte 씩 읽어들인다.

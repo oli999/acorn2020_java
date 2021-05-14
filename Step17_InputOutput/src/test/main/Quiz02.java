@@ -79,7 +79,7 @@ public class Quiz02 extends JFrame implements ActionListener{
 		
 		//1. 파일에서 문자열을 읽어와서
 		//2. JTextArea 에 출력하기 
-		File memoFile=new File("c:/acorn2020/myFolder/memo.txt");
+		File memoFile=new File("c:/acorn202104/myFolder/memo.txt");
 		//필요한 객체의 참조값을 담을 지역 변수를 미리 만든다.
 		FileReader fr=null;
 		BufferedReader br=null;
@@ -118,7 +118,7 @@ public class Quiz02 extends JFrame implements ActionListener{
 		//1. JTextField 에 입력한 문자열을 읽어와서
 		String str=tf_msg.getText();
 		//2. memo.txt 파일에 저장하기 
-		File file1=new File("c:/acorn2020/myFolder/memo.txt");
+		File file1=new File("c:/acorn202104/myFolder/memo.txt");
 		try {
 			boolean isExist=file1.exists();
 			if(!isExist) {

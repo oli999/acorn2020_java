@@ -7,7 +7,7 @@ import java.io.IOException;
 public class MainClass12 {
 	public static void main(String[] args) {
 		//문자열을 저장할 파일을 만들기위한 File 객체
-		File memoFile=new File("c:/acorn2020/myFolder/memo.txt");
+		File memoFile=new File("c:/acorn202104/myFolder/memo.txt");
 		try {
 			//실제로 파일이 존재하는지 여부 
 			boolean isExist=memoFile.exists();
@@ -17,13 +17,11 @@ public class MainClass12 {
 			}
 			//파일에 문자열을 출력할 객체
 			FileWriter fw=new FileWriter(memoFile);
-			fw.write("하나");
-			fw.write("\r\n");//개행기호
-			fw.write("두울");
-			fw.write("\r\n");//개행기호
-			fw.write("세엣");
+			fw.write("김구라\r\n");
+			fw.write("\t해골\r\n");
+			fw.write("원숭이");
 			fw.flush();
-			fw.close(); // .close()  시점에 파일이 만들어 진다.
+			fw.close();
 			System.out.println("파일에 문자열을 저장 했습니다.");
 		}catch(IOException ie) {
 			ie.printStackTrace();

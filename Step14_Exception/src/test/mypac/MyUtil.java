@@ -12,7 +12,7 @@ public class MyUtil {
 		System.out.println("그림 완성!");
 	}
 	//메소드 안에서 발생하는 Exception 을 던져 버리는 경우
-	public static void send() throws InterruptedException {
+	public static void send() throws InterruptedException{
 		System.out.println("5 초 동안 전송을 해요");
 		Thread.sleep(5000);
 		System.out.println("전송 완료");

@@ -47,11 +47,10 @@ public class MainClass09 {
 		Map<String, Object> b=list.get(0);
 		Object c=list.get(0).get("num");
 		Object d=list.get(0).get("name");
-		Object e=list.get(0).get("addr");
+		Object e=list.get(0).get("addr");	
 		int f=(int)list.get(0).get("num");
 		String g=(String)list.get(0).get("name");
 		String h=(String)list.get(0).get("addr");
-		
 		int i=((String)list.get(0).get("addr")).length();
 	}
 }

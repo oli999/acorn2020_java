@@ -13,9 +13,9 @@ public class MainClass17 {
 		
 		try {
 			//파일에서 byte 를 읽어낼 객체 
-			fis=new FileInputStream("c:/acorn2020/myFolder/1.jpg");
+			fis=new FileInputStream("c:/acorn202104/myFolder/1.jpg");
 			//읽어낸 byte 를 출력할 객체 
-			fos=new FileOutputStream("c:/acorn2020/myFolder/copied2.jpg");
+			fos=new FileOutputStream("c:/acorn202104/myFolder/copied2.jpg");
 			//byte 데이터를 읽어낼 방1024 개 짜리 배열객체 생성
 			byte[] buffer=new byte[1024];
 			//반복문 돌면서 읽어내기
@@ -26,7 +26,7 @@ public class MainClass17 {
 				if(readedByte==-1) {//더이상 읽을 byte 가 없다면 
 					break;//반복문 탈출
 				}
-				//byte[] 에 있는 데이터를 읽은 만큼 출력하기
+				//byte[] 에 있는 데이터를 0 번방에서 부터 읽은 만큼(readedByte) 출력하기
 				fos.write(buffer, 0, readedByte);
 			}
 			System.out.println("파일을 성공적으로 복사 했습니다.");

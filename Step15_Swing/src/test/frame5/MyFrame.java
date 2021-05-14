@@ -1,6 +1,7 @@
 package test.frame5;
 
 import java.awt.Button;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,10 +29,12 @@ public class MyFrame extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				//System.out.println("전송 합니다~");
 				JOptionPane.showMessageDialog(MyFrame.this, "전송합니다~");
+				
 			}
 		};
 		
 		sendBtn.addActionListener(listener);
+		
 		//lamda 식 활용해 보기 
 		removeBtn.addActionListener((e)->{
 			JOptionPane.showMessageDialog(MyFrame.this, "삭제합니다~");

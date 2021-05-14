@@ -19,6 +19,7 @@ public class MainClass08 {
 		dto.setAddr(addr);
 		//insert() 메소드 호출하면서 전달하기 
 		insert(dto);
+		
 	}
 	//MemberDto 객체를 인자로 전달 받아서 회원정보를 DB 에 저장하는 메소드 
 	public static void insert(MemberDto dto) {

@@ -8,7 +8,7 @@ public class MainClass13 {
 	public static void main(String[] args) {
 		//정수를 담을수 있는 HashSet 객체를 생성해서 참조값을 Set type 지역 변수에 담기
 		Set<Integer> nums=new HashSet<>();
-		
+	
 		//0~9 정수를 for 문을 이용해서 담기
 		for(int i=0; i<10; i++) {
 			nums.add(i);

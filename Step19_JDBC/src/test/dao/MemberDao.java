@@ -25,7 +25,9 @@ public class MemberDao {
 	private static MemberDao dao;
 	
 	//외부에서 객체 생성하지 못하도록 한다. 
-	private MemberDao() {}
+	private MemberDao() {
+		System.out.println("MemberDao 객체가 생성되었습니다.");
+	}
 	
 	//참조값을 리턴해주는 메소드
 	public static MemberDao getInstance() {

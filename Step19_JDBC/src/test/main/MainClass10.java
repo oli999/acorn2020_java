@@ -16,12 +16,12 @@ public class MainClass10 {
 		dto.setAddr("상도동");
 		//MemberDao 객체의 메소드를 활용해서 저장할수 있다. 
 		dao.insert(dto);
+		//MemberDao a=new MemberDao();
 		
 		MemberDao dao2=MemberDao.getInstance();
-		//수정할 회원의 정보라면
-		MemberDto dto2=new MemberDto(1, "김구라", "독산동");
-		dao2.update(dto2);
-		
+		dao.delete(31);
+		// dao 와 dao2 에는 같은 참조값이 들어 있다. 
+		boolean result = dao == dao2;
 	}
 }
 

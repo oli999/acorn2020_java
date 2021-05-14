@@ -10,19 +10,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.UIManager;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import javax.swing.plaf.metal.OceanTheme;
 
 public class Quiz03 extends JFrame implements ActionListener{
 	//필드
@@ -99,7 +93,7 @@ public class Quiz03 extends JFrame implements ActionListener{
 	}
 	//파일에 있는 문자열을 읽어와서 출력하는 작업을 하는 메소드
 	public void openContent() {
-		JFileChooser fc=new JFileChooser("c:/acorn2020/myFolder");
+		JFileChooser fc=new JFileChooser("c:/acorn202104/myFolder");
 		//파일을 open 하는 다이얼로그 띄우기 
 		int result=fc.showOpenDialog(this);	
 		if(result == JFileChooser.APPROVE_OPTION) {
@@ -134,7 +128,7 @@ public class Quiz03 extends JFrame implements ActionListener{
 	public void saveContent() {
 		//JTextArea 에 입력한 문자열을 읽어온다.
 		String content=area.getText();
-		JFileChooser fc=new JFileChooser("c:/acorn2020/myFolder");
+		JFileChooser fc=new JFileChooser("c:/acorn202104/myFolder");
 		int result=fc.showSaveDialog(this);	
 		if(result == JFileChooser.APPROVE_OPTION) {
 			//새로 만들 예정인 File 객체 의 참조값 얻어오기 

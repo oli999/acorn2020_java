@@ -43,8 +43,11 @@ public class Frame02 extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
+		//스레드 객체 생성해서 
 		CountThread t=new CountThread();
-		t.start();
+		//새로운 스레드 시작 시키기 
+		t.start(); // start() 메소드는 run() 메소드 리턴과 상관없이 바로 리턴하기 때문에
+		//아래의 내용이 바로 콘솔창에 출력된다. 
 		System.out.println("새로운 스레드를 시작 했습니다.");
 	}
 }

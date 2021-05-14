@@ -42,6 +42,7 @@ public class Frame01 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		JOptionPane.showMessageDialog(this, "알림~~~");
+		
 		System.out.println("알림창이 닫아 졌습니다.");
 		
 		try {

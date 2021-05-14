@@ -57,7 +57,7 @@ public class ClientMain extends JFrame implements ActionListener{
 		
 		Socket socket=null;
 		try {
-			socket=new Socket("192.168.0.30", 5000);
+			socket=new Socket("14.63.164.99", 5000);
 			System.out.println("Socket 연결 성공!");
 			//문자열을 서버에 전송(출력Output) 하기
 			OutputStream os=socket.getOutputStream();
