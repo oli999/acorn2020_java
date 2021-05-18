@@ -31,6 +31,7 @@ public class MemoDao {
 	public static MemoDao getInstance() {
 		if(dao==null) {//최초 호출되면 null 이므로 
 			dao=new MemoDao();//객체를 생성해서 static 필드에 담는다. 
+			System.out.println("최초로 사용될 때 MemoDao 객체를 생성 했습니다.");
 		}
 		return dao;
 	}
